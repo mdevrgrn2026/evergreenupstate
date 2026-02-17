@@ -1,13 +1,59 @@
 <!doctype html>
+evergreen-logo.png
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Evergreen Landscape Maintenance of the Upstate</title>
-  <meta name="description" content="Evergreen Landscape Maintenance of the Upstate — proudly serving Clemson, Pendleton, and Seneca. Call or text 864-353-2806 for a free estimate." />
+<header class="topbar">
+  <div class="wrap">
+    <div class="row">
+      
+      <a class="brand" href="#top">
+        <img src="evergreen-logo.png" alt="Evergreen Landscape Maintenance Logo" class="logo">
+        <div class="brand-text">
+          <h1>Evergreen Landscape Maintenance</h1>
+          <small>of the Upstate</small>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="#services">Services</a>
+        <a href="#why">Why Evergreen</a>
+        <a href="#estimate-form">Free Estimate</a>
+        <a class="btn primary" href="tel:8643532806">Call / Text: 864-353-2806</a>
+      </nav>
+
+    </div>
+  </div>
+</header>
 
   <style>
-    :root{
+    :root{.logo {
+  height: 50px;
+  width: auto;
+  display: block;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.brand-text h1 {
+  margin: 0;
+  font-size: 16px;
+  color: white;
+}
+
+.brand-text small {
+  color: rgba(255,255,255,.85);
+}
+
+@media (max-width: 600px){
+  .logo {
+    height: 38px;
+  }
+}
+
       --deep: #1F4D2B;     /* deep green */
       --light: #8BCF9B;    /* light green */
       --gray: #6E6E6E;     /* gray */
