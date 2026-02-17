@@ -1,46 +1,400 @@
- <!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Evergreen Landscape Maintenance | Clemson Lawn Care</title>
-<style>
-body {font-family: Arial, sans-serif; margin:0; background:#f4f4f4; text-align:center;}
-header {background:#0b3d2e; color:white; padding:20px;}
-.hero {background:#1f6f4a; color:white; padding:80px 20px;}
-.section {padding:60px 20px;}
-.btn {display:inline-block; padding:15px 25px; background:white; color:#1f6f4a; text-decoration:none; border-radius:6px; margin:10px; font-weight:bold;}
-.grid {display:flex; flex-wrap:wrap; justify-content:center; gap:20px;}
-.card {background:white; padding:20px; border-radius:8px; width:250px; box-shadow:0 3px 8px rgba(0,0,0,0.1);}
-.footer {background:#0b3d2e; color:white; padding:30px;}
-</style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Evergreen Landscape Maintenance of the Upstate</title>
+  <meta name="description" content="Evergreen Landscape Maintenance of the Upstate — proudly serving Clemson, Pendleton, and Seneca. Call or text 864-353-2806 for a free estimate." />
+
+  <style>
+    :root{
+      --deep: #1F4D2B;     /* deep green */
+      --light: #8BCF9B;    /* light green */
+      --gray: #6E6E6E;     /* gray */
+      --white:#FFFFFF;
+      --bg: #F6F8F6;       /* soft background */
+      --card:#FFFFFF;
+      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --radius: 18px;
+      --max: 1100px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      color:#1b1b1b;
+      background: var(--bg);
+      line-height:1.5;
+    }
+    a{color:inherit}
+    .wrap{max-width:var(--max); margin:0 auto; padding: 0 18px;}
+    .topbar{
+      background: var(--deep);
+      color: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 6px 20px rgba(0,0,0,.15);
+    }
+    .topbar .row{
+      display:flex; align-items:center; justify-content:space-between;
+      padding: 12px 0;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      text-decoration:none;
+    }
+    .mark{
+      width:38px; height:38px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--light), rgba(255,255,255,.15));
+      display:grid; place-items:center;
+      font-weight:900;
+      color: var(--deep);
+    }
+    .brand h1{margin:0; font-size:16px; letter-spacing:.2px}
+    .brand small{display:block; color: rgba(255,255,255,.85); font-weight:500}
+    .nav{
+      display:flex; gap:14px; align-items:center; flex-wrap:wrap;
+      font-size:14px;
+    }
+    .nav a{
+      color: rgba(255,255,255,.92);
+      text-decoration:none;
+      padding:8px 10px;
+      border-radius: 12px;
+    }
+    .nav a:hover{background: rgba(255,255,255,.10)}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      gap:8px;
+      padding: 12px 14px;
+      border-radius: 14px;
+      text-decoration:none;
+      font-weight:800;
+      letter-spacing:.2px;
+      border: 2px solid transparent;
+      cursor:pointer;
+      white-space: nowrap;
+    }
+    .btn.primary{
+      background: var(--light);
+      color: #0f2d18;
+    }
+    .btn.primary:hover{filter: brightness(.98)}
+    .btn.outline{
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,.35);
+    }
+    .btn.outline:hover{background: rgba(255,255,255,.10)}
+
+    /* HERO */
+    .hero{
+      padding: 46px 0 26px;
+    }
+    .heroCard{
+      background: var(--deep);
+      color: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+      position:relative;
+    }
+    .heroInner{
+      padding: 34px 22px;
+      display:grid;
+      grid-template-columns: 1.3fr .7fr;
+      gap: 18px;
+      align-items:center;
+    }
+    @media (max-width: 860px){
+      .heroInner{grid-template-columns: 1fr; }
+    }
+    .kicker{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      color: rgba(255,255,255,.92);
+      font-weight:700;
+      font-size: 13px;
+      width: fit-content;
+    }
+    .kicker .dot{
+      width:10px; height:10px; border-radius: 50%;
+      background: var(--light);
+      box-shadow: 0 0 0 6px rgba(139,207,155,.18);
+    }
+    .hero h2{
+      margin: 14px 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.1;
+      letter-spacing: .2px;
+    }
+    .hero p{
+      margin: 0 0 18px;
+      color: rgba(255,255,255,.90);
+      max-width: 60ch;
+      font-size: 16px;
+    }
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap}
+    .ctaRow .btn{font-size: 14px}
+
+    .heroSide{
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: 16px;
+      padding: 18px;
+    }
+    .heroSide h3{margin:0 0 8px; font-size: 16px}
+    .heroSide ul{margin: 0; padding-left: 18px; color: rgba(255,255,255,.92)}
+    .heroSide li{margin: 6px 0}
+    .serviceArea{
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(255,255,255,.18);
+      color: rgba(255,255,255,.92);
+      font-weight:700;
+    }
+
+    /* SECTIONS */
+    .section{padding: 26px 0}
+    .section h3{
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: var(--deep);
+      letter-spacing:.2px;
+    }
+    .muted{color: var(--gray)}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 900px){ .grid{grid-template-columns: 1fr} }
+    .card{
+      background: var(--card);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 18px;
+      border: 1px solid rgba(31,77,43,.08);
+    }
+    .pill{
+      display:inline-block;
+      background: rgba(139,207,155,.28);
+      color:#0f2d18;
+      border: 1px solid rgba(139,207,155,.45);
+      font-weight:800;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      letter-spacing:.2px;
+      margin-bottom: 8px;
+    }
+    .list{
+      margin: 12px 0 0;
+      padding: 0;
+      list-style:none;
+      display:grid;
+      gap: 10px;
+    }
+    .list li{
+      display:flex;
+      gap:10px;
+      align-items:flex-start;
+    }
+    .check{
+      width: 20px; height: 20px; border-radius: 8px;
+      background: rgba(139,207,155,.35);
+      display:grid; place-items:center;
+      flex: 0 0 20px;
+      margin-top: 2px;
+      border: 1px solid rgba(31,77,43,.10);
+      color: var(--deep);
+      font-weight: 900;
+      font-size: 12px;
+    }
+
+    /* OFFER + FOOTER */
+    .offer{
+      background: linear-gradient(135deg, rgba(139,207,155,.35), rgba(255,255,255,.0));
+      border: 1px solid rgba(31,77,43,.10);
+      border-radius: var(--radius);
+      padding: 18px;
+      display:flex;
+      justify-content:space-between;
+      gap: 14px;
+      align-items:center;
+      flex-wrap: wrap;
+    }
+    .offer strong{color: var(--deep); font-size: 18px}
+    footer{
+      background: #0f2d18;
+      color: rgba(255,255,255,.9);
+      padding: 22px 0;
+      margin-top: 24px;
+    }
+    footer a{color: rgba(255,255,255,.95)}
+    .tiny{font-size: 12px; color: rgba(255,255,255,.75)}
+  </style>
 </head>
+
 <body>
+  <header class="topbar">
+    <div class="wrap">
+      <div class="row">
+        <a class="brand" href="#top">
+          <div class="mark">E</div>
+          <div>
+            <h1>Evergreen Landscape Maintenance</h1>
+            <small>of the Upstate</small>
+          </div>
+        </a>
 
-<header>
-<h2>Evergreen Landscape Maintenance</h2>
-<p>Clemson • Pendleton • Seneca</p>
-</header>
+        <nav class="nav">
+          <a href="#services">Services</a>
+          <a href="#why">Why Evergreen</a>
+          <a href="#estimate">Free Estimate</a>
+          <a class="btn outline" href="https://evergreenupstate.com" target="_blank" rel="noopener">Website</a>
+          <a class="btn primary" href="tel:8643532806">Call / Text: 864-353-2806</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<section class="hero">
-<h1>Lawn Care & Landscape Maintenance</h1>
-<p>No Contracts. Pay Per Service.</p>
-<a class="btn" href="tel:8643532806">Call Now</a>
-<a class="btn" href="/contact.html">Get Free Quote</a>
-</section>
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="heroCard">
+        <div class="heroInner">
+          <div>
+            <div class="kicker"><span class="dot"></span> Reliable • Professional • Year-Round Care</div>
+            <h2>Keep your property looking its best.</h2>
+            <p>
+              Lawn mowing, edging, trimming, bed maintenance, mulch, cleanups, and leaf removal —
+              done right and on schedule.
+            </p>
+            <div class="ctaRow">
+              <a class="btn primary" href="tel:8643532806">Call for a Free Estimate</a>
+              <a class="btn outline" href="#estimate">Request Estimate</a>
+            </div>
+          </div>
 
-<section class="section">
-<h2>Service Areas</h2>
-<div class="grid">
-<div class="card"><a href="/clemson.html">Clemson Lawn Service</a></div>
-<div class="card"><a href="/pendleton.html">Pendleton Lawn Care</a></div>
-<div class="card"><a href="/seneca.html">Seneca Landscape Maintenance</a></div>
-</div>
-</section>
+          <aside class="heroSide">
+            <h3>Services Included</h3>
+            <ul>
+              <li>Lawn Mowing & Edging</li>
+              <li>Shrub & Hedge Trimming</li>
+              <li>Mulching & Bed Maintenance</li>
+              <li>Seasonal Cleanups</li>
+              <li>Leaf Removal</li>
+            </ul>
+            <div class="serviceArea">Proudly serving Clemson • Pendleton • Seneca</div>
+          </aside>
+        </div>
+      </div>
+    </section>
 
-<div class="footer">
-<p>864-353-2806</p>
-</div>
+    <section id="services" class="section">
+      <h3>Services</h3>
+      <p class="muted">Simple, dependable landscape maintenance for residential and commercial properties.</p>
 
+      <div class="grid">
+        <div class="card">
+          <div class="pill">Weekly / Bi-Weekly</div>
+          <h4 style="margin:0;color:var(--deep)">Lawn Care</h4>
+          <ul class="list">
+            <li><span class="check">✓</span> Mowing & edging</li>
+            <li><span class="check">✓</span> Blowing hard surfaces clean</li>
+            <li><span class="check">✓</span> Consistent scheduling</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="pill">Curb Appeal</div>
+          <h4 style="margin:0;color:var(--deep)">Beds & Shrubs</h4>
+          <ul class="list">
+            <li><span class="check">✓</span> Bed maintenance</li>
+            <li><span class="check">✓</span> Shrub & hedge trimming</li>
+            <li><span class="check">✓</span> Mulch installs</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <div class="pill">Seasonal</div>
+          <h4 style="margin:0;color:var(--deep)">Cleanups</h4>
+          <ul class="list">
+            <li><span class="check">✓</span> Spring / fall cleanups</li>
+            <li><span class="check">✓</span> Leaf removal</li>
+            <li><span class="check">✓</span> One-time or recurring</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="why" class="section">
+      <h3>Why Choose Evergreen</h3>
+      <div class="grid">
+        <div class="card">
+          <h4 style="margin:0;color:var(--deep)">Locally Owned & Operated</h4>
+          <p class="muted" style="margin:10px 0 0">Upstate service you can count on.</p>
+        </div>
+        <div class="card">
+          <h4 style="margin:0;color:var(--deep)">Reliable & On-Time</h4>
+          <p class="muted" style="margin:10px 0 0">Clear communication and consistent work.</p>
+        </div>
+        <div class="card">
+          <h4 style="margin:0;color:var(--deep)">Detail-Oriented Care</h4>
+          <p class="muted" style="margin:10px 0 0">Clean edges, neat lines, professional finish.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="estimate" class="section">
+      <h3>Free Estimate</h3>
+      <div class="offer">
+        <div>
+          <strong>Call or text 864-353-2806</strong><br/>
+          <span class="muted">Fast quotes for Clemson • Pendleton • Seneca.</span>
+        </div>
+        <div style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn primary" href="tel:8643532806">Call Now</a>
+          <a class="btn primary" href="sms:8643532806">Text Now</a>
+          <a class="btn outline" href="https://evergreenupstate.com">Visit Website</a>
+        </div>
+      </div>
+
+      <!-- OPTIONAL: QR IMAGE -->
+      <!--
+      <div class="card" style="margin-top:14px; text-align:center">
+        <img src="qr-evergreenupstate.png" alt="QR Code to evergreenupstate.com" style="width:160px; height:160px" />
+        <p class="muted" style="margin:10px 0 0">Scan for a free estimate</p>
+      </div>
+      -->
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div style="display:flex; justify-content:space-between; gap:14px; flex-wrap:wrap; align-items:center">
+        <div>
+          <strong>Evergreen Landscape Maintenance of the Upstate</strong><br/>
+          <span class="tiny">Proudly serving Clemson • Pendleton • Seneca</span>
+        </div>
+        <div>
+          <a href="tel:8643532806">864-353-2806</a> • <a href="https://evergreenupstate.com">evergreenupstate.com</a>
+        </div>
+      </div>
+      <div class="tiny" style="margin-top:10px">© <span id="y"></span> Evergreen. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
