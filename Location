@@ -1,3 +1,143 @@
 clemson.html
 pendleton.html
 seneca.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clemson Lawn Service | Evergreen Landscape Maintenance</title>
+<meta name="description" content="Professional lawn service in Clemson, SC. Weekly mowing, edging, bed maintenance, and turf care. No contracts. Reliable local lawn care.">
+<style>
+body {font-family: Arial; margin:0; padding:0; background:#f4f4f4; text-align:center;}
+header {background:#0b3d2e; color:white; padding:20px;}
+.section {padding:60px 20px; max-width:900px; margin:auto;}
+.footer {background:#0b3d2e; color:white; padding:30px;}
+a {color:#1f6f4a; font-weight:bold;}
+.btn {display:inline-block; padding:15px 25px; margin-top:20px; background:#1f6f4a; color:white; text-decoration:none; border-radius:6px;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Clemson Lawn Service</h1>
+<p>Evergreen Landscape Maintenance</p>
+</header>
+
+<div class="section">
+<p>Evergreen Landscape Maintenance proudly provides professional lawn service in Clemson, South Carolina. We work with homeowners throughout Clemson who want dependable, clean, and professional lawn care without being locked into a contract.</p>
+
+<p>Our Clemson lawn service includes weekly and biweekly mowing, edging, blowing, bed maintenance, and full property upkeep. We understand Clemson neighborhoods and the importance of curb appeal in maintaining property value.</p>
+
+<p>Homeowners in Clemson trust Evergreen because we show up on schedule, communicate clearly, and deliver consistent results. No contracts. Pay per service. Simple, reliable lawn care in Clemson.</p>
+
+<h2>Services Available in Clemson</h2>
+<p>• Lawn Maintenance<br>
+• Edging & Blowing<br>
+• Bed Maintenance & Shrub Trimming<br>
+• Seasonal Cleanups<br>
+• Lawn Fertilization & Weed Control provided by <a href="https://nvlawnscapes.com" target="_blank">Lawnscapes</a></p>
+
+<p>If you're searching for reliable lawn care in Clemson, Evergreen Landscape Maintenance is ready to help.</p>
+
+<a class="btn" href="tel:8643532806">Call 864-353-2806</a>
+</div>
+
+<div class="footer">
+<p>Proudly Serving Clemson, Pendleton & Seneca</p>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pendleton Lawn Care | Evergreen Landscape Maintenance</title>
+<meta name="description" content="Professional lawn care in Pendleton, SC. Reliable mowing, edging, and landscape maintenance. No contracts. Local lawn service.">
+<style>
+body {font-family: Arial; margin:0; padding:0; background:#f4f4f4; text-align:center;}
+header {background:#0b3d2e; color:white; padding:20px;}
+.section {padding:60px 20px; max-width:900px; margin:auto;}
+.footer {background:#0b3d2e; color:white; padding:30px;}
+a {color:#1f6f4a; font-weight:bold;}
+.btn {display:inline-block; padding:15px 25px; margin-top:20px; background:#1f6f4a; color:white; text-decoration:none; border-radius:6px;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Pendleton Lawn Care</h1>
+<p>Evergreen Landscape Maintenance</p>
+</header>
+
+<div class="section">
+<p>Evergreen Landscape Maintenance provides dependable lawn care services in Pendleton, South Carolina. We serve homeowners across Pendleton who want consistent, professional lawn maintenance without long-term contracts.</p>
+
+<p>Our Pendleton lawn care services include mowing, edging, blowing, bed maintenance, and seasonal property cleanup. We understand the character of Pendleton neighborhoods and take pride in keeping lawns clean and well maintained.</p>
+
+<p>Pendleton residents choose Evergreen for reliable scheduling, professional equipment, and straightforward pricing. No contracts. Pay per service. Simple and dependable lawn care in Pendleton.</p>
+
+<h2>Services Available in Pendleton</h2>
+<p>• Weekly & Biweekly Lawn Maintenance<br>
+• Bed Maintenance<br>
+• Shrub Trimming<br>
+• Seasonal Cleanups<br>
+• Lawn Fertilization & Weed Control provided by <a href="https://nvlawnscapes.com" target="_blank">Lawnscapes</a></p>
+
+<a class="btn" href="tel:8643532806">Call 864-353-2806</a>
+</div>
+
+<div class="footer">
+<p>Proudly Serving Clemson, Pendleton & Seneca</p>
+</div>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seneca Landscape Maintenance | Evergreen Landscape Maintenance</title>
+<meta name="description" content="Professional landscape maintenance in Seneca, SC. Lawn mowing, bed maintenance, and turf care. No contracts. Reliable local service.">
+<style>
+body {font-family: Arial; margin:0; padding:0; background:#f4f4f4; text-align:center;}
+header {background:#0b3d2e; color:white; padding:20px;}
+.section {padding:60px 20px; max-width:900px; margin:auto;}
+.footer {background:#0b3d2e; color:white; padding:30px;}
+a {color:#1f6f4a; font-weight:bold;}
+.btn {display:inline-block; padding:15px 25px; margin-top:20px; background:#1f6f4a; color:white; text-decoration:none; border-radius:6px;}
+</style>
+</head>
+<body>
+
+<header>
+<h1>Seneca Landscape Maintenance</h1>
+<p>Evergreen Landscape Maintenance</p>
+</header>
+
+<div class="section">
+<p>Evergreen Landscape Maintenance proudly offers professional landscape maintenance services in Seneca, South Carolina. We work with homeowners throughout Seneca who want reliable lawn service and consistent property care.</p>
+
+<p>Our Seneca landscape maintenance services include mowing, edging, blowing, bed maintenance, shrub trimming, and seasonal cleanups. We understand the needs of Seneca properties and focus on keeping lawns sharp and well maintained.</p>
+
+<p>Homeowners in Seneca choose Evergreen because we are dependable, professional, and easy to work with. No contracts. Pay per service. Simple, reliable landscape maintenance in Seneca.</p>
+
+<h2>Services Available in Seneca</h2>
+<p>• Lawn Maintenance<br>
+• Bed Maintenance<br>
+• Shrub Trimming<br>
+• Seasonal Cleanups<br>
+• Lawn Fertilization & Weed Control provided by <a href="https://nvlawnscapes.com" target="_blank">Lawnscapes</a></p>
+
+<a class="btn" href="tel:8643532806">Call 864-353-2806</a>
+</div>
+
+<div class="footer">
+<p>Proudly Serving Clemson, Pendleton & Seneca</p>
+</div>
+
+</body>
+</html>
