@@ -1,152 +1,175 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <img src="evergreen-logo.png" alt="Evergreen Landscape Maintenance Logo" class="logo">
+
+ <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>FAQ | Evergreen Landscape Maintenance of the Upstate</title>
-  <meta name="description" content="Evergreen FAQ — answers about mowing, scheduling, estimates, pricing, and service areas in Clemson, Pendleton, and Seneca." />
+  <title>Evergreen Landscape Maintenance of the Upstate</title>
+  <meta name="description" content="Evergreen Landscape Maintenance — proudly serving Clemson, Pendleton, and Seneca. Call/Text 864-353-2806 for a free estimate." />
 
   <style>
     :root{
-      --deep:#1F4D2B;     /* deep green */
-      --light:#8BCF9B;    /* light green */
-      --gray:#6E6E6E;     /* gray */
+      --deep:#1F4D2B;
+      --light:#8BCF9B;
+      --gray:#6E6E6E;
       --bg:#F6F8F6;
       --card:#FFFFFF;
-      --shadow: 0 10px 30px rgba(0,0,0,.08);
+      --shadow: 0 12px 34px rgba(0,0,0,.10);
       --radius: 18px;
-      --max: 980px;
+      --max: 1180px;
     }
     *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color:#1b1b1b;
-      line-height:1.5;
-    }
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:var(--bg);color:#1b1b1b;line-height:1.5}
     a{color:inherit}
-    .wrap{max-width:var(--max); margin:0 auto; padding:0 18px;}
+    .wrap{max-width:var(--max);margin:0 auto;padding:0 18px}
+
+    /* HEADER (Troops-style: sticky, strong CTAs) */
     header{
-      background: var(--deep);
-      color:#fff;
-      position: sticky;
-      top:0;
-      z-index:20;
-      box-shadow: 0 6px 20px rgba(0,0,0,.15);
+      position: sticky; top: 0; z-index: 50;
+      background: rgba(15,45,24,.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid rgba(255,255,255,.10);
     }
-    .row{
-      display:flex; justify-content:space-between; align-items:center;
-      gap:14px; flex-wrap:wrap; padding: 12px 0;
+    .topRow{
+      display:flex; align-items:center; justify-content:space-between;
+      gap:14px; flex-wrap:wrap; padding: 10px 0;
     }
-    .brand{display:flex; align-items:center; gap:12px; text-decoration:none;}
-    .logo{height:46px; width:auto; display:block;}
-    .brand h1{margin:0; font-size:16px;}
-    .brand small{display:block; color:rgba(255,255,255,.85); font-weight:600}
+    .brand{display:flex; align-items:center; gap:12px; text-decoration:none}
+    .logo{height:44px; width:auto; display:block}
+    .brand h1{margin:0;font-size:16px;color:#fff}
+    .brand small{display:block;color:rgba(255,255,255,.80);font-weight:650}
+
     .nav{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
-    .nav a{color:rgba(255,255,255,.92); text-decoration:none; padding:8px 10px; border-radius:12px; font-size:14px}
+    .nav a{color:rgba(255,255,255,.90); text-decoration:none; padding:8px 10px; border-radius:12px; font-size:14px}
     .nav a:hover{background:rgba(255,255,255,.10)}
+
     .btn{
       display:inline-flex; align-items:center; justify-content:center;
-      padding: 12px 14px; border-radius: 14px; text-decoration:none;
-      font-weight:800; border:2px solid transparent; white-space:nowrap;
+      padding: 11px 14px; border-radius: 14px;
+      text-decoration:none; font-weight:900; letter-spacing:.2px;
+      border:2px solid transparent; white-space:nowrap; cursor:pointer;
+      font-size: 14px;
     }
-    .btn.primary{background: var(--light); color:#0f2d18;}
-    .btn.primary:hover{filter: brightness(.98)}
-    .btn.outline{border-color:rgba(255,255,255,.35); color:#fff;}
+    .btn.primary{background:var(--light); color:#0f2d18}
+    .btn.primary:hover{filter:brightness(.98)}
+    .btn.outline{background:transparent; color:#fff; border-color:rgba(255,255,255,.28)}
     .btn.outline:hover{background:rgba(255,255,255,.10)}
 
-    main{padding: 26px 0 90px;}
+    /* HERO (photo background like Troops) */
     .hero{
-      background:#fff;
-      border-radius: var(--radius);
+      margin: 16px 0 0;
+      border-radius: 22px;
+      overflow:hidden;
       box-shadow: var(--shadow);
-      border:1px solid rgba(31,77,43,.08);
-      padding: 22px;
-      margin-top: 18px;
+      border: 1px solid rgba(31,77,43,.10);
+      background:
+        linear-gradient(90deg, rgba(15,45,24,.92), rgba(15,45,24,.55)),
+        url("hero.jpg") center/cover no-repeat;
+      color:#fff;
     }
+    .heroInner{
+      padding: 34px 20px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      align-items:center;
+    }
+    @media (max-width: 900px){ .heroInner{grid-template-columns:1fr} .logo{height:38px} }
+
     .kicker{
       display:inline-flex; gap:10px; align-items:center;
-      padding: 8px 12px; border-radius:999px;
-      background: rgba(139,207,155,.22);
-      border:1px solid rgba(139,207,155,.35);
-      font-weight:800;
-      color:#0f2d18;
-      font-size:13px;
+      padding: 8px 12px; border-radius: 999px;
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.16);
+      font-weight:850; font-size: 13px;
+      width: fit-content;
     }
-    .dot{width:10px; height:10px; border-radius:50%; background: var(--light); box-shadow:0 0 0 6px rgba(139,207,155,.18)}
-    h2{margin:14px 0 8px; color:var(--deep); font-size: clamp(26px, 3.5vw, 40px); line-height:1.1}
-    .muted{color: var(--gray)}
-    .meta{
-      display:flex; gap:10px; flex-wrap:wrap; margin-top: 12px;
-      font-weight:700;
+    .dot{width:10px;height:10px;border-radius:50%;background:var(--light);box-shadow:0 0 0 6px rgba(139,207,155,.18)}
+    .hero h2{margin:14px 0 10px; font-size: clamp(30px, 4.2vw, 48px); line-height:1.05}
+    .hero p{margin:0 0 16px; color:rgba(255,255,255,.90); max-width:62ch}
+    .ctaRow{display:flex; gap:10px; flex-wrap:wrap}
+
+    .heroCard{
+      background: rgba(255,255,255,.10);
+      border: 1px solid rgba(255,255,255,.16);
+      border-radius: 18px;
+      padding: 16px;
     }
-    .pill{
-      padding: 7px 10px;
-      border-radius: 999px;
-      background: rgba(31,77,43,.06);
-      border:1px solid rgba(31,77,43,.10);
-      color: #0f2d18;
-      font-size: 13px;
+    .heroCard h3{margin:0 0 8px; font-size: 16px}
+    .heroCard ul{margin:0; padding-left: 18px; color:rgba(255,255,255,.92)}
+    .heroCard li{margin:6px 0}
+    .area{
+      margin-top: 12px;
+      padding-top: 12px;
+      border-top: 1px solid rgba(255,255,255,.18);
+      font-weight:850;
     }
 
-    .faqWrap{
-      margin-top: 16px;
-      background:#fff;
+    /* SECTIONS */
+    main{padding: 18px 0 90px}
+    .section{padding: 22px 0}
+    .section h3{margin:0 0 10px; font-size: 22px; color: var(--deep)}
+    .muted{color: var(--gray)}
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+    @media (max-width: 900px){ .grid{grid-template-columns: 1fr} }
+
+    .card{
+      background: var(--card);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      border:1px solid rgba(31,77,43,.08);
-      overflow:hidden;
+      border: 1px solid rgba(31,77,43,.08);
+      padding: 18px;
     }
-    .faqItem{
-      border-top: 1px solid rgba(31,77,43,.10);
-      padding: 0;
+    .pill{
+      display:inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: rgba(139,207,155,.22);
+      border: 1px solid rgba(139,207,155,.38);
+      color: #0f2d18;
+      font-weight: 900;
+      font-size: 12px;
+      letter-spacing:.2px;
+      margin-bottom: 8px;
     }
-    .faqItem:first-child{border-top:0}
-    .q{
-      width:100%;
-      background:transparent;
-      border:0;
-      text-align:left;
-      padding: 16px 18px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      cursor:pointer;
-      font-weight:900;
-      color: var(--deep);
-      font-size: 15px;
+    .list{margin: 12px 0 0; padding: 0; list-style:none; display:grid; gap:10px}
+    .list li{display:flex; gap:10px; align-items:flex-start}
+    .check{
+      width:20px; height:20px; border-radius: 8px;
+      background: rgba(139,207,155,.28);
+      border: 1px solid rgba(31,77,43,.10);
+      display:grid; place-items:center; font-weight:950; color: var(--deep);
+      flex: 0 0 20px; margin-top:2px; font-size: 12px;
     }
-    .q:hover{background: rgba(31,77,43,.03)}
-    .icon{
-      width:28px; height:28px; border-radius:10px;
-      display:grid; place-items:center;
-      background: rgba(139,207,155,.25);
-      border:1px solid rgba(139,207,155,.35);
-      color:#0f2d18;
-      flex: 0 0 28px;
-      font-weight:900;
-    }
-    .a{
-      display:none;
-      padding: 0 18px 16px;
-      color:#1b1b1b;
-    }
-    .a p{margin:10px 0 0}
-    .a ul{margin:10px 0 0; padding-left: 18px}
-    .open .a{display:block}
-    .open .icon{background: rgba(139,207,155,.40)}
 
-    /* Sticky bottom CTA like the example page */
+    /* FORM */
+    label{font-weight:850; color: var(--deep); font-size: 13px}
+    input, textarea, select{
+      width:100%;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border:1px solid rgba(0,0,0,.18);
+      margin: 6px 0 12px;
+      font: inherit;
+      background:#fff;
+    }
+    textarea{min-height: 110px; resize: vertical}
+    .formRow{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
+    @media (max-width: 720px){ .formRow{grid-template-columns:1fr} }
+
+    /* Sticky bottom bar (Troops-style CTAs) */
     .stickyCta{
-      position: fixed;
-      left: 0; right: 0; bottom: 0;
+      position: fixed; left:0; right:0; bottom:0;
       background: rgba(15,45,24,.96);
-      backdrop-filter: blur(6px);
       border-top: 1px solid rgba(255,255,255,.12);
       padding: 10px 0;
-      z-index: 30;
+      z-index: 60;
     }
     .stickyCta .bar{
       display:flex; justify-content:space-between; align-items:center;
@@ -155,38 +178,14 @@
     .stickyCta strong{color:#fff}
     .stickyCta .tiny{color: rgba(255,255,255,.80); font-size: 12px}
     .stickyCta .actions{display:flex; gap:10px; flex-wrap:wrap}
-    .stickyCta .actions a{font-size: 14px}
-
-    /* simple form card */
-    .formCard{
-      margin-top: 16px;
-      background:#fff;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      border:1px solid rgba(31,77,43,.08);
-      padding: 18px;
-    }
-    label{font-weight:800; color: var(--deep); font-size: 13px}
-    input, textarea, select{
-      width:100%;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border:1px solid rgba(0,0,0,.18);
-      margin: 6px 0 12px;
-      font: inherit;
-    }
-    textarea{min-height: 110px; resize: vertical}
-    .formRow{display:grid; grid-template-columns: 1fr 1fr; gap:12px}
-    @media (max-width: 720px){ .formRow{grid-template-columns:1fr} .logo{height:38px} }
   </style>
 </head>
 
 <body>
   <header>
     <div class="wrap">
-      <div class="row">
-        <a class="brand" href="index.html">
-          <!-- put your real logo file in the same folder -->
+      <div class="topRow">
+        <a class="brand" href="#top">
           <img class="logo" src="evergreen-logo.png" alt="Evergreen Logo">
           <div>
             <h1>Evergreen Landscape Maintenance</h1>
@@ -195,167 +194,153 @@
         </a>
 
         <nav class="nav">
-          <a class="btn outline" href="index.html">Home</a>
-          <a class="btn primary" href="tel:8643532806">Call / Text: 864-353-2806</a>
+          <a href="#services">Services</a>
+          <a href="#why">Why Choose Us</a>
+          <a href="#estimate">Free Estimate</a>
+          <a class="btn outline" href="#estimate">Free Estimate Here</a>
+          <a class="btn primary" href="tel:8643532806">Call Now</a>
         </nav>
       </div>
     </div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="kicker"><span class="dot"></span> Frequently Asked Questions</div>
-      <h2>Answers before you book.</h2>
-      <p class="muted">Quick info about scheduling, pricing, prep, and what to expect. Proudly serving Clemson, Pendleton, and Seneca.</p>
-      <div class="meta">
-        <span class="pill">Licensed & Insured</span>
-        <span class="pill">Reliable • Professional • Year-Round Care</span>
-        <span class="pill">Free Estimates</span>
+  <main id="top" class="wrap">
+    <section class="hero" aria-label="Hero">
+      <div class="heroInner">
+        <div>
+          <div class="kicker"><span class="dot"></span> Reliable • Professional • Year-Round Care</div>
+          <h2>Lawn & landscape maintenance done right.</h2>
+          <p>
+            Mowing, edging, trimming, bed maintenance, mulch, seasonal cleanups, and leaf removal —
+            clean, consistent, and on schedule.
+          </p>
+          <div class="ctaRow">
+            <a class="btn primary" href="tel:8643532806">Call / Text: 864-353-2806</a>
+            <a class="btn outline" href="#estimate">Get Free Estimate</a>
+          </div>
+        </div>
+
+        <aside class="heroCard">
+          <h3>Services Included</h3>
+          <ul>
+            <li>Lawn Mowing & Edging</li>
+            <li>Shrub & Hedge Trimming</li>
+            <li>Mulching & Bed Maintenance</li>
+            <li>Seasonal Cleanups</li>
+            <li>Leaf Removal</li>
+          </ul>
+          <div class="area">Proudly serving Clemson • Pendleton • Seneca</div>
+        </aside>
       </div>
     </section>
 
-    <!-- FAQ ACCORDION -->
-    <section class="faqWrap" aria-label="FAQ">
-      <div class="faqItem">
-        <button class="q" type="button">
-          What services do you provide?
-          <span class="icon">+</span>
-        </button>
-        <div class="a">
-          <p>We focus on dependable landscape maintenance, including:</p>
-          <ul>
-            <li>Lawn mowing & edging</li>
-            <li>Shrub & hedge trimming</li>
-            <li>Mulching & bed maintenance</li>
-            <li>Seasonal cleanups</li>
-            <li>Leaf removal</li>
+    <section id="services" class="section">
+      <h3>Our Services</h3>
+      <p class="muted">Simple categories like Troops uses (easy to scan + easy to click). :contentReference[oaicite:2]{index=2}</p>
+
+      <div class="grid">
+        <div class="card">
+          <div class="pill">Lawn Care</div>
+          <h4 style="margin:0;color:var(--deep)">Mowing & Edging</h4>
+          <ul class="list">
+            <li><span class="check">✓</span> Crisp edges and clean finish</li>
+            <li><span class="check">✓</span> Blown-off hard surfaces</li>
+            <li><span class="check">✓</span> Routine or one-time service</li>
           </ul>
         </div>
-      </div>
 
-      <div class="faqItem">
-        <button class="q" type="button">
-          What areas do you service?
-          <span class="icon">+</span>
-        </button>
-        <div class="a">
-          <p>We proudly serve <strong>Clemson, Pendleton, and Seneca</strong> (and nearby areas depending on schedule).</p>
-        </div>
-      </div>
-
-      <div class="faqItem">
-        <button class="q" type="button">
-          How do you price mowing and maintenance?
-          <span class="icon">+</span>
-        </button>
-        <div class="a">
-          <p>Pricing is based on yard size, access, slope/obstacles, and the services needed (mowing only vs. beds/shrubs/cleanup).</p>
-        </div>
-      </div>
-
-      <div class="faqItem">
-        <button class="q" type="button">
-          Do you offer free estimates?
-          <span class="icon">+</span>
-        </button>
-        <div class="a">
-          <p>Yes — call/text <strong>864-353-2806</strong> or submit the form below. We’ll confirm details and send your estimate.</p>
-        </div>
-      </div>
-
-      <div class="faqItem">
-        <button class="q" type="button">
-          What should I do before your crew arrives?
-          <span class="icon">+</span>
-        </button>
-        <div class="a">
-          <ul>
-            <li>Secure pets indoors</li>
-            <li>Unlock gates for backyard access</li>
-            <li>Move toys, hoses, and loose debris</li>
+        <div class="card">
+          <div class="pill">Maintenance</div>
+          <h4 style="margin:0;color:var(--deep)">Beds & Shrubs</h4>
+          <ul class="list">
+            <li><span class="check">✓</span> Bed maintenance</li>
+            <li><span class="check">✓</span> Shrub & hedge trimming</li>
+            <li><span class="check">✓</span> Mulch installs</li>
           </ul>
         </div>
-      </div>
 
-      <div class="faqItem">
-        <button class="q" type="button">
-          What’s your rescheduling or weather policy?
-          <span class="icon">+</span>
-        </button>
-        <div class="a">
-          <p>If weather prevents service, we reschedule as soon as conditions allow and communicate by text/call.</p>
-        </div>
-      </div>
-
-      <div class="faqItem">
-        <button class="q" type="button">
-          Do you handle fertilization / weed control?
-          <span class="icon">+</span>
-        </button>
-        <div class="a">
-          <p>We can connect turf care requests to our sister company for fertilization & weed control.</p>
-        </div>
-      </div>
-
-      <div class="faqItem">
-        <button class="q" type="button">
-          How do I pay?
-          <span class="icon">+</span>
-        </button>
-        <div class="a">
-          <p>We’ll confirm payment options when you approve the estimate (simple, hassle-free).</p>
+        <div class="card">
+          <div class="pill">Seasonal</div>
+          <h4 style="margin:0;color:var(--deep)">Cleanups</h4>
+          <ul class="list">
+            <li><span class="check">✓</span> Spring / fall cleanups</li>
+            <li><span class="check">✓</span> Leaf removal</li>
+            <li><span class="check">✓</span> One-time or recurring</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- ESTIMATE FORM (emails you via FormSubmit) -->
-    <section id="estimate-form" class="formCard" aria-label="Free estimate form">
-      <h3 style="margin:0; color:var(--deep)">Request a Free Estimate</h3>
-      <p class="muted" style="margin:8px 0 14px">This emails your request to <strong>mdevrgrn@gmail.com</strong>.</p>
-
-      <form action="https://formsubmit.co/mdevrgrn@gmail.com" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_subject" value="New Evergreen Estimate Request">
-        <input type="hidden" name="_next" value="https://evergreenupstate.com/thankyou.html">
-
-        <div class="formRow">
-          <div>
-            <label for="name">Full Name</label>
-            <input id="name" name="name" required />
-          </div>
-          <div>
-            <label for="phone">Phone Number</label>
-            <input id="phone" name="phone" required />
-          </div>
+    <section id="why" class="section">
+      <h3>Why Choose Evergreen</h3>
+      <div class="grid">
+        <div class="card">
+          <div class="pill">Trust</div>
+          <h4 style="margin:0;color:var(--deep)">Reliable & On-Time</h4>
+          <p class="muted" style="margin:10px 0 0">Clear communication, consistent scheduling, professional results.</p>
         </div>
-
-        <div class="formRow">
-          <div>
-            <label for="email">Email (optional)</label>
-            <input id="email" name="email" type="email" />
-          </div>
-          <div>
-            <label for="service">Service Needed</label>
-            <select id="service" name="service" required>
-              <option value="" selected disabled>Select one</option>
-              <option>Lawn Mowing & Edging</option>
-              <option>Shrub / Hedge Trimming</option>
-              <option>Mulch / Bed Maintenance</option>
-              <option>Seasonal Cleanup</option>
-              <option>Leaf Removal</option>
-              <option>Multiple Services</option>
-            </select>
-          </div>
+        <div class="card">
+          <div class="pill">Quality</div>
+          <h4 style="margin:0;color:var(--deep)">Detail-Oriented Work</h4>
+          <p class="muted" style="margin:10px 0 0">Clean lines, neat edges, and a finished look every visit.</p>
         </div>
+        <div class="card">
+          <div class="pill">Local</div>
+          <h4 style="margin:0;color:var(--deep)">Upstate Service</h4>
+          <p class="muted" style="margin:10px 0 0">Focused on Clemson, Pendleton, and Seneca.</p>
+        </div>
+      </div>
+    </section>
 
-        <label for="address">Service Address</label>
-        <input id="address" name="address" required />
+    <section id="estimate" class="section">
+      <h3>Free Estimate</h3>
+      <p class="muted">Fill this out and it emails you at <strong>mdevrgrn@gmail.com</strong>.</p>
 
-        <label for="details">Details (gate access, pets, timing, notes)</label>
-        <textarea id="details" name="details" required></textarea>
+      <div class="card" style="max-width:740px">
+        <form action="https://formsubmit.co/mdevrgrn@gmail.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_subject" value="New Evergreen Estimate Request">
+          <input type="hidden" name="_next" value="https://evergreenupstate.com/thankyou.html">
 
-        <button class="btn primary" type="submit" style="width:100%">Send Estimate Request</button>
-      </form>
+          <div class="formRow">
+            <div>
+              <label for="name">Full Name</label>
+              <input id="name" name="name" required>
+            </div>
+            <div>
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" required>
+            </div>
+          </div>
+
+          <div class="formRow">
+            <div>
+              <label for="email">Email (optional)</label>
+              <input id="email" name="email" type="email">
+            </div>
+            <div>
+              <label for="service">Service Needed</label>
+              <select id="service" name="service" required>
+                <option value="" selected disabled>Select one</option>
+                <option>Lawn Mowing & Edging</option>
+                <option>Shrub / Hedge Trimming</option>
+                <option>Mulch / Bed Maintenance</option>
+                <option>Seasonal Cleanup</option>
+                <option>Leaf Removal</option>
+                <option>Multiple Services</option>
+              </select>
+            </div>
+          </div>
+
+          <label for="address">Service Address</label>
+          <input id="address" name="address" required>
+
+          <label for="details">Details (gate access, pets, timing, notes)</label>
+          <textarea id="details" name="details" required></textarea>
+
+          <button class="btn primary" type="submit" style="width:100%">Send Estimate Request</button>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -363,42 +348,19 @@
     <div class="wrap">
       <div class="bar">
         <div>
-          <strong>Free Estimate</strong><div class="tiny">Clemson • Pendleton • Seneca</div>
+          <strong>Free Estimate</strong>
+          <div class="tiny">Clemson • Pendleton • Seneca</div>
         </div>
         <div class="actions">
-          <a class="btn primary" href="#estimate-form">Free Estimate Here</a>
-          <a class="btn outline" href="tel:8643532806">Call Now</a>
+          <a class="btn outline" href="#estimate">Free Estimate Here</a>
+          <a class="btn primary" href="tel:8643532806">Call Now</a>
         </div>
       </div>
     </div>
   </div>
-
-  <script>
-    // Simple accordion behavior
-    document.querySelectorAll(".faqItem").forEach(item => {
-      const btn = item.querySelector(".q");
-      const icon = item.querySelector(".icon");
-      btn.addEventListener("click", () => {
-        const isOpen = item.classList.toggle("open");
-        icon.textContent = isOpen ? "–" : "+";
-      });
-    });
-  </script>
-
-  <!-- FAQ schema for Google -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"FAQPage",
-    "mainEntity":[
-      {"@type":"Question","name":"What services do you provide?","acceptedAnswer":{"@type":"Answer","text":"We provide lawn mowing & edging, shrub/hedge trimming, mulching & bed maintenance, seasonal cleanups, and leaf removal."}},
-      {"@type":"Question","name":"What areas do you service?","acceptedAnswer":{"@type":"Answer","text":"We proudly serve Clemson, Pendleton, and Seneca (and nearby areas depending on schedule)."}},
-      {"@type":"Question","name":"Do you offer free estimates?","acceptedAnswer":{"@type":"Answer","text":"Yes. Call/text 864-353-2806 or submit the estimate form to receive a quote."}}
-    ]
-  }
-  </script>
 </body>
 </html>
+
 
 
 
