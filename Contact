@@ -1,0 +1,130 @@
+contact.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Free Quote | Evergreen Landscape Maintenance</title>
+<meta name="description" content="Request a free quote for lawn care and landscape maintenance in Clemson, Pendleton, and Seneca." />
+<style>
+  body {font-family: Arial, sans-serif; margin:0; background:#f4f4f4; color:#333;}
+  header {background:#0b3d2e; color:white; padding:20px; text-align:center;}
+  .wrap {max-width:900px; margin:0 auto; padding:40px 16px;}
+  .card {background:white; border-radius:10px; padding:24px; box-shadow:0 3px 10px rgba(0,0,0,0.1);}
+  h1 {margin-top:0;}
+  label {display:block; text-align:left; margin:14px 0 6px; font-weight:bold;}
+  input, select, textarea {
+    width:100%; padding:12px; border:1px solid #ddd; border-radius:8px; font-size:16px;
+    box-sizing:border-box;
+  }
+  textarea {min-height:130px; resize:vertical;}
+  .row {display:flex; gap:16px; flex-wrap:wrap;}
+  .col {flex:1; min-width:240px;}
+  .btn {
+    display:inline-block; margin-top:16px; padding:14px 18px; border-radius:8px;
+    background:#1f6f4a; color:white; text-decoration:none; font-weight:bold; border:none; cursor:pointer;
+    width:100%; font-size:18px;
+  }
+  .small {font-size:13px; color:#666; text-align:left; margin-top:10px;}
+  .top-actions {display:flex; gap:10px; flex-wrap:wrap; margin-bottom:16px;}
+  .ghost {
+    display:inline-block; padding:12px 14px; border-radius:8px; background:white; color:#1f6f4a;
+    text-decoration:none; font-weight:bold; border:2px solid #1f6f4a;
+  }
+  footer {text-align:center; padding:30px 10px; color:#666;}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Evergreen Landscape Maintenance</h2>
+  <p>Clemson • Pendleton • Seneca</p>
+</header>
+
+<div class="wrap">
+  <div class="top-actions">
+    <a class="ghost" href="index.html">← Back to Home</a>
+    <a class="ghost" href="tel:8643532806">Call 864-353-2806</a>
+  </div>
+
+  <div class="card">
+    <h1>Request a Free Quote</h1>
+    <p style="text-align:left;">Fill this out and we’ll get back to you fast. No contracts. Pay per service.</p>
+
+    <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+      <!-- Helps you identify where the lead came from -->
+      <input type="hidden" name="source" value="EvergreenUpstate.com" />
+
+      <div class="row">
+        <div class="col">
+          <label for="name">Full Name *</label>
+          <input id="name" name="name" type="text" required />
+        </div>
+        <div class="col">
+          <label for="phone">Phone *</label>
+          <input id="phone" name="phone" type="tel" required placeholder="864-555-1234" />
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="email">Email (optional)</label>
+          <input id="email" name="email" type="email" placeholder="you@email.com" />
+        </div>
+        <div class="col">
+          <label for="city">Service Area *</label>
+          <select id="city" name="service_area" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Clemson">Clemson</option>
+            <option value="Pendleton">Pendleton</option>
+            <option value="Seneca">Seneca</option>
+            <option value="Other">Other (tell us below)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <label for="service">What do you need? *</label>
+          <select id="service" name="service_needed" required>
+            <option value="" disabled selected>Select one</option>
+            <option value="Lawn Maintenance">Lawn Maintenance (Mowing/Edging/Blowing)</option>
+            <option value="Bed Maintenance">Bed Maintenance (Weeding/Trimming)</option>
+            <option value="Seasonal Cleanup">Seasonal Cleanup</option>
+            <option value="Multiple Services">Multiple Services</option>
+            <option value="Turf Care (Lawnscapes)">Turf Care (Fertilization/Weed Control - Lawnscapes)</option>
+          </select>
+        </div>
+        <div class="col">
+          <label for="yard">Lawn Size (optional)</label>
+          <select id="yard" name="lawn_size">
+            <option value="" selected>Choose (optional)</option>
+            <option value="Small">Small</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="Not sure">Not sure</option>
+          </select>
+        </div>
+      </div>
+
+      <label for="message">Details (address, gate code, preferred day/time, etc.) *</label>
+      <textarea id="message" name="message" required></textarea>
+
+      <!-- Optional: Email subject line -->
+      <input type="hidden" name="_subject" value="New Quote Request - EvergreenUpstate.com" />
+
+      <button class="btn" type="submit">Send My Quote Request</button>
+
+      <div class="small">
+        Turf Care: Lawn Fertilization & Weed Control provided by <a href="https://nvlawnscapes.com" target="_blank" rel="noopener">Lawnscapes</a>.
+      </div>
+    </form>
+  </div>
+
+  <footer>
+    <p><strong>Evergreen Landscape Maintenance of the Upstate</strong> • 864-353-2806</p>
+  </footer>
+</div>
+
+</body>
+</html>
